@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // Rutas
-app.use('/api', require('./routes/users'));
+app.use('/api', require('./routes/devices'));
 //app.use('/api/events', require('./routes/events'));
 
 // Escuchar peticiones
