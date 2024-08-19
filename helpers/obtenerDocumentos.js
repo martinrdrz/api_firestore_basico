@@ -6,12 +6,18 @@ const obtenerDocumentos = (snapshot) => {
         return documentos;
     }
 
-    snapshot.forEach((doc) => {
+    snapshot.docs.map((doc) => {
         documentos.push({
             id: doc.id,
             ...doc.data(),
         });
     });
+    // snapshot.forEach((doc) => {
+    //     documentos.push({
+    //         id: doc.id,
+    //         ...doc.data(),
+    //     });
+    // });
     return documentos;
 };
 

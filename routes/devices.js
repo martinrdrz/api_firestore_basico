@@ -8,6 +8,6 @@ router.get('/read/:id', getDevice);
 
 router.post('/write', createDevice);
 
-router.post('/update', updateDevice);
+router.post('/update/:id', updateDevice);
 
 module.exports = router;

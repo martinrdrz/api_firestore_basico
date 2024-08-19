@@ -27,7 +27,11 @@ const createDevice = (device = {}) => {
     return { result: 'Usuario Creado' };
 };
 
-const updateDevice = (device = {}) => {
+const updateDevice = async (id, body) => {
+    const docRef = db.collection('dispositivos').doc(id);
+    await docRef.update(body);
+    //console.log(id);
+    //console.log(body);
     return { result: 'Usuario Actualizado' };
 };
 
